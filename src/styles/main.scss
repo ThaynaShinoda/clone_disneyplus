@@ -6,6 +6,7 @@
 @use 'available-devices';
 @use 'faq';
 @use 'footer';
+@use 'header';
 
 //Importação de fontes externas
 @font-face {
@@ -37,6 +38,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
+    list-style: none;
 }
 
 body {
@@ -80,12 +82,37 @@ body {
     height: 60px;
     font-size: 18px;
     color: variaveis.$colorTextSecondary;
-    background-color: #6421ff;
+    background-color: variaveis.$colorBtnPrimary;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
     cursor: pointer;
     text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$colorBtnPrimary;
+
+    &:hover {
+        background-color: lighten(variaveis.$colorBtnPrimary, 3%);
+    }
+
+    &--secondary {
+        background-color: variaveis.$colorBtnSecondary;
+        border-color: variaveis.$colorBtnSecondary;
+
+        &:hover {
+            background-color: lighten(variaveis.$colorBtnSecondary, 3%);
+        }
+    }
+
+    &--dark {
+        background-color: variaveis.$colorBtnDark;
+        border-color: variaveis.$colorTextSecondary;
+
+        &:hover {
+            background-color: variaveis.$colorTextSecondary;
+            color: variaveis.$bgColor;
+        }
+    }
 }
 
 .image-text-section {

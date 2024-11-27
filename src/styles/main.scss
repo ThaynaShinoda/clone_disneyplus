@@ -2,6 +2,7 @@
 @use 'variaveis';
 @use 'hero';
 @use 'shows';
+@use 'plans';
 
 //Importação de fontes externas
 @font-face {
@@ -68,4 +69,18 @@ body {
     @include text(18px);
     color: variaveis.$colorTextSecondary;
     text-decoration: underline;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$colorTextSecondary;
+    background-color: #6421ff;
+    border-radius: 4px;
+    margin-top: 2vw;
+    margin-bottom: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
 }
